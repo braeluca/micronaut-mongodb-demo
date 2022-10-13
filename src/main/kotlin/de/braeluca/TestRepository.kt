@@ -1,8 +1,10 @@
 package de.braeluca
 
 import io.micronaut.data.mongodb.annotation.MongoFindQuery
+import io.micronaut.data.mongodb.annotation.MongoRepository
 import io.micronaut.data.repository.CrudRepository
 
+@MongoRepository()
 interface TestRepository : CrudRepository<TestDocument, String> {
 
     @MongoFindQuery(filter = "{'name': {'\$in': :names}}")

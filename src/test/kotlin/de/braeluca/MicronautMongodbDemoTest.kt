@@ -12,11 +12,16 @@ import java.time.LocalDateTime
 class MicronautMongodbDemoTest {
 
     @Inject
-    testRepository: TestRepository
+    lateinit var testRepository: TestRepository
 
     @Test
-    fun testItWorks() {
-        val testDocuments =
+    fun `in list with one parameter`() {
+        val testDocuments = testRepository.findByNameInList(listOf("1"))
+    }
+
+    @Test
+    fun `in list with two parameters`() {
+        val testDocuments = testRepository.findByNameInList(listOf("1", "2"))
     }
 
 }
