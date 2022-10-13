@@ -11,11 +11,12 @@ import java.time.LocalDateTime
 @MicronautTest(transactional = false)
 class MicronautMongodbDemoTest {
 
-
+    @Inject
+    testRepository: TestRepository
 
     @Test
     fun testItWorks() {
-
+        val testDocuments =
     }
 
 }
