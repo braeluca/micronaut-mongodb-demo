@@ -1,0 +1,9 @@
+logger:
+  levels:
+    root: INFO
+    io.micronaut.data.query: DEBUG
+
+test-resources:
+  containers:
+    mongodb:
+      image-name: mongo:4.2.8
